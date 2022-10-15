@@ -1,0 +1,7 @@
+<h1>タスク編集</h1>
+<%= form_for(@project) do |form| %>
+  <div><%= form.label :project name %></div>
+  <div><%= form.text_field :name %></div>
+  <div><%= form.submit %></div>
+<% end %>
+<%= link_to '戻る', tasks_path %>

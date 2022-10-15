@@ -1,0 +1,18 @@
+<h1>Project</h1>
+<%= link_to '追加', new_project_path %>
+<table>
+  <thead>
+    <tr>
+      <th>project name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @projects.each do |project| %>
+      <tr>
+        <td><%= project.name %></td>
+        <td><%= link_to '編集', edit_project_path(project) %></td>
+        <td><%= link_to '削除', project_path(project), method: :delete %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
